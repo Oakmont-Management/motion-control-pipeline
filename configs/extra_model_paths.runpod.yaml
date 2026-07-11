@@ -1,0 +1,8 @@
+# RunPod — same folder structure, different root (network volume).
+comfyui:
+  base_path: /runpod-volume/ComfyUI/
+  unet: models/unet/
+  text_encoders: models/text_encoders/
+  vae: models/vae/
+  clip_vision: models/clip_vision/
+  loras: models/loras/

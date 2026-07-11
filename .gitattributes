@@ -1,0 +1,6 @@
+# Shell scripts run on the Linux RunPod tier — force LF so bash doesn't choke on CRLF.
+*.sh text eol=lf
+# JSON workflows + configs: normalize to LF too (ComfyUI + PyYAML are LF-native).
+*.json text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf

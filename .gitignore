@@ -1,0 +1,11 @@
+models/
+outputs/
+inputs/
+venv/
+*.gguf
+*.safetensors
+*.pt
+*.bin
+__pycache__/
+extra_model_paths.yaml
+configs/resolved_models.env

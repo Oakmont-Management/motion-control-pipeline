@@ -1,0 +1,9 @@
+# Local (Documents/ComfyUI) — Kijai WanVideoWrapper model roots.
+# The workflow names files; this file resolves the roots, so the graph is portable.
+comfyui:
+  base_path: C:/Users/YOUR_USERNAME/Documents/ComfyUI/   # <-- set to your ComfyUI path
+  unet: models/unet/
+  text_encoders: models/text_encoders/
+  vae: models/vae/
+  clip_vision: models/clip_vision/
+  loras: models/loras/
