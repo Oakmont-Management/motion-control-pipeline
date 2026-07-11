@@ -24,6 +24,13 @@ cp "$(dirname "$0")/../configs/extra_model_paths.runpod.yaml" "$DEST"
 sed -i "s#^\([[:space:]]*base_path:\).*#\1 $COMFY_ROOT/#" "$DEST"
 echo "wrote $DEST (base_path: $COMFY_ROOT/)"
 
+# Surface this repo's workflows in ComfyUI's Workflows sidebar so they're
+# clickable in the browser (no local drag-and-drop needed).
+WF_DEST="$COMFY_ROOT/user/default/workflows"
+mkdir -p "$WF_DEST"
+cp "$(dirname "$0")/../workflows/"*.json "$WF_DEST/"
+echo "copied workflows -> $WF_DEST"
+
 cd "$COMFY_ROOT"
 # --listen 0.0.0.0 exposes the UI through RunPod's proxy port.
 # shellcheck disable=SC2086

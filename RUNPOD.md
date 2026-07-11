@@ -36,10 +36,12 @@ bash scripts/verify_env.sh                     # confirms every node + weight is
 bash scripts/run_runpod.sh
 ```
 Then open the pod's **port 8188** HTTP service (RunPod → your pod → "Connect" → the `:8188` proxy URL).
-`run_runpod.sh` auto-pins the model paths to `COMFY_ROOT`, so the dropdowns will be populated.
+`run_runpod.sh` auto-pins the model paths to `COMFY_ROOT`, so the dropdowns will be populated. It also
+copies this repo's workflows into `ComfyUI/user/default/workflows/`, so both appear in the **Workflows**
+sidebar (left panel) — just click to open, no local file needed.
 
 ## Step 3 — Base render
-1. Drag **`workflows/Wan22_Animate_RunPod_720p_Q8.json`** onto the canvas.
+1. Open **`Wan22_Animate_RunPod_720p_Q8.json`** from the **Workflows** sidebar (or drag the file onto the canvas).
 2. **`Load Image`** node (in the *Reference Image* group) → upload your **4K hero**.
 3. **`Load Video (Upload)`** node → upload your **driving video**.
 4. (If your clip isn't 3:4) set the two **`INTConstant`** nodes (*Width* / *Height*) to match its aspect,
@@ -49,7 +51,7 @@ Then open the pod's **port 8188** HTTP service (RunPod → your pod → "Connect
 6. **Queue.** The saved mp4 lands in `ComfyUI/output/`.
 
 ## Step 4 — Finish (SeedVR2 upscale)
-1. Drag **`workflows/SeedVR2_Upscale_Finish.json`** onto the canvas.
+1. Open **`SeedVR2_Upscale_Finish.json`** from the **Workflows** sidebar (or drag the file onto the canvas).
 2. Point its **`Load Video`** node at the Step-3 output.
 3. **Queue.** Output preserves the original audio + fps, upscaled to ~1440.
 
