@@ -1,4 +1,6 @@
 # RunPod — same folder structure, different root (network volume).
+# NOTE: run_runpod.sh rewrites base_path to match the actual COMFY_ROOT at launch
+# (Pods mount at /workspace, serverless at /runpod-volume). This value is just the default.
 comfyui:
   base_path: /runpod-volume/ComfyUI/
   unet: models/unet/
