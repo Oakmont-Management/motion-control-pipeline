@@ -1,0 +1,5 @@
+# Soft dependency. torch / numpy / scipy already ship with ComfyUI.
+# PyAV gives the in-memory H.264 codec path; if its build fails, the node falls back
+# to an ffmpeg subprocess (via imageio_ffmpeg on this machine). Already present in the
+# active ComfyUI venv (av 16.1.0) - listed here for RunPod / fresh installs.
+av>=10.0.0

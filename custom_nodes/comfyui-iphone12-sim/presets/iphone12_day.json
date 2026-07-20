@@ -1,0 +1,53 @@
+{
+  "name": "iphone12_day",
+  "notes": [
+    "Bright daylight, effective ISO ~50. The tell is the Smart HDR tone curve + sharpening + codec, NOT grain.",
+    "Do NOT add visible noise to daylight or it reads as a filter (spec 4).",
+    "Cool white balance is the iPhone daylight signature.",
+    "Two real H.264 generations: 17 Mbps camera pass, 3.5 Mbps Instagram platform pass."
+  ],
+  "optics": {
+    "strength": 1.0,
+    "k1": 0.0125,
+    "k2": -0.0042,
+    "ca_px": 0.6,
+    "corner_softness_max_sigma": 0.75,
+    "vignette_amount": 0.18
+  },
+  "sensor": {
+    "iso": 50,
+    "strength": 1.0,
+    "temporal_persistence": 0.65,
+    "chroma_ratio": 1.9,
+    "spatial_corr": 0.55,
+    "fpn_amount": 0.15,
+    "chroma_smear": 0.0,
+    "temporal_nr_ghosting": 0.0
+  },
+  "isp": {
+    "smart_hdr": 1.0,
+    "sharpen": 0.9,
+    "sharpen_radius": 0.9,
+    "sharpen_overshoot": 1.35,
+    "local_tone_mapping": 0.35,
+    "warmth": -0.12,
+    "tint": 0.0
+  },
+  "motion": {
+    "jitter_amount": 1.0,
+    "ois_correction": 0.72,
+    "rolling_shutter": 1.0,
+    "readout_ms": 16.4,
+    "motion_blur": 0.0
+  },
+  "codec": {
+    "gen1_bitrate_kbps": 17000,
+    "platform_bitrate_kbps": 3500,
+    "platform_max_width": 1080,
+    "gop": 60,
+    "preset": "medium",
+    "profile": "high",
+    "bframes": 2,
+    "crf": null
+  }
+}

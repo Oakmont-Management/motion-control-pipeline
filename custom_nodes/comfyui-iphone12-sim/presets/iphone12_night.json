@@ -1,0 +1,54 @@
+{
+  "name": "iphone12_night",
+  "notes": [
+    "Low light, effective ISO ~1250. iPhone 12 VIDEO has no Night Mode - it just gets noisy and soft.",
+    "Coarse, chroma-blotchy noise (high chroma_ratio + spatial_corr) plus chroma smear + temporal-NR ghosting.",
+    "Sharpen is REDUCED vs day (0.5 < 0.9): Apple backs off sharpening in low light to avoid amplifying noise. Getting this backwards is the classic mistake (spec 4).",
+    "Warm white balance, weaker OIS (more visible handheld shake), more shutter blur.",
+    "Two real H.264 generations: 14 Mbps camera pass, 3.0 Mbps Instagram platform pass."
+  ],
+  "optics": {
+    "strength": 1.0,
+    "k1": 0.0125,
+    "k2": -0.0042,
+    "ca_px": 0.6,
+    "corner_softness_max_sigma": 0.75,
+    "vignette_amount": 0.18
+  },
+  "sensor": {
+    "iso": 1250,
+    "strength": 1.0,
+    "temporal_persistence": 0.85,
+    "chroma_ratio": 2.4,
+    "spatial_corr": 0.72,
+    "fpn_amount": 0.18,
+    "chroma_smear": 0.62,
+    "temporal_nr_ghosting": 0.4
+  },
+  "isp": {
+    "smart_hdr": 0.85,
+    "sharpen": 0.5,
+    "sharpen_radius": 0.9,
+    "sharpen_overshoot": 1.35,
+    "local_tone_mapping": 0.35,
+    "warmth": 0.3,
+    "tint": 0.0
+  },
+  "motion": {
+    "jitter_amount": 1.0,
+    "ois_correction": 0.55,
+    "rolling_shutter": 1.0,
+    "readout_ms": 16.4,
+    "motion_blur": 0.35
+  },
+  "codec": {
+    "gen1_bitrate_kbps": 14000,
+    "platform_bitrate_kbps": 3000,
+    "platform_max_width": 1080,
+    "gop": 60,
+    "preset": "medium",
+    "profile": "high",
+    "bframes": 2,
+    "crf": null
+  }
+}
